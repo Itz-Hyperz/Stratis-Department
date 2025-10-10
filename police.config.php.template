@@ -1,0 +1,45 @@
+<?php
+    const CONFIG = [
+        "information" => [
+            "name" => "San Andreas Police Department",
+            "logo" => "./images/police/logo.png",
+            "background" => "../images/police/background.jpg",
+            "meta" => [
+                "logo" => "./images/police/logo.png",
+                "description" => "The San Andreas Police Department of Elevation Roleplay",
+                "color" => "001960",
+            ],
+            "button" => [
+                "text" => "Apply",
+                "link" => "./apply",
+            ]
+        ],
+        "colors" => [
+            "backgroundColor" => "000315",
+            "accentColor" => "001960",
+            "buttonTextColor" => "ffffff",
+        ],
+        "navbar" => [
+            "name" => [
+                "firstLine" => [
+                    "text" => "San Andreas",
+                    "fontSize" => "2.9",
+                ],
+                "secondLine" => [
+                    "text" => "Police Department",
+                    "fontSize" => "1.96",
+                ],
+            ],
+            "links" => [
+                "Roster" => "./roster",
+                "Structures" => "./structures",
+                "Discord" => "./discord",
+            ],
+        ],
+        "header" => [
+            "tagline" => "Start Your Career",
+            "nameFontSize" => "3.65",
+            "message" => "Your impact begins with service. Stand with those who dedicate every day to making a difference."
+        ]
+    ];
+?>
