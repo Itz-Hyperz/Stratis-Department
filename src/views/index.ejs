@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - <%= config.information.name %></title>
+    <link rel="icon" type="image/png" href="<%= config.information.logo %>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css">
+    <meta name="theme-color" content="#<%= config.information.meta.color %>">
+    <meta name="twitter:card" content="summary">
+    <meta property="og:title" content="Home - <%= config.information.name %>">
+    <meta property="og:description" content="<%= config.information.meta.description %>">
+    <meta property="og:image" content="<%= config.information.meta.logo %>">
+    <style>
+        :root {
+            --background-color: #<%= config.colors.backgroundColor %>;
+            --accent-color: #<%= config.colors.accentColor %>;
+            --button-text-color: #<%= config.colors.buttonTextColor %>;
+            --background-image: url("<%= config.information.background %>");
+            --first-line-font-size: <%= config.navbar.name.firstLine.fontSize %>vh;
+            --second-line-font-size: <%= config.navbar.name.secondLine.fontSize %>vh;
+            --name-font-size: <%= config.header.nameFontSize %>vh;
+            --external-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 640'%3E%3Cpath fill='%23<%= config.colors.buttonTextColor %>' d='M320 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l82.7 0L201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L448 109.3l0 82.7c0 17.7 14.3 32 32 32s32-14.3 32-32l0-160c0-17.7-14.3-32-32-32L320 0zM80 32C35.8 32 0 67.8 0 112L0 432c0 44.2 35.8 80 80 80l320 0c44.2 0 80-35.8 80-80l0-112c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 112c0 8.8-7.2 16-16 16L80 448c-8.8 0-16-7.2-16-16l0-320c0-8.8 7.2-16 16-16l112 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L80 32z'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <section class="preloader"></section>
+
+    <section class="navbar">
+        <div class="left">
+            <img src="<%= config.information.logo %>" alt="<%= config.information.name %>" />
+            <div class="alt-text">
+                <h1><%= config.navbar.name.firstLine.text %></h1>
+                <h2><%= config.navbar.name.secondLine.text %></h2>
+            </div>
+        </div>
+        <div class="center">
+            <% Object.entries(config.navbar.links).forEach(([name, link]) => { %>
+                <a href="<%= link %>" target="_blank" rel="noopener"><%= name %></a>
+            <% }) %>
+        </div>
+        <div class="right">
+            <a href="<%= config.information.button.link %>" target="_blank" rel="noopener">
+                <%= config.information.button.text %> <i class="icon link"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="header">
+        <div class="right">
+            <h1><%= config.header.tagline %></h1>
+            <h2><%= config.information.name %></h2>
+            <p><%= config.header.message %></p>
+            <div class="apply-button">
+                <a href="<%= config.information.button.link %>" target="_blank" rel="noopener">
+                    <%= config.information.button.text %> <i class="icon link"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        window.onload = function () {
+            document.querySelector('.preloader').classList.add('loaded');
+        };
+    </script>
+</body>
+</html>

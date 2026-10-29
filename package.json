@@ -1,0 +1,17 @@
+{
+  "name": "stratis-department-ejs",
+  "version": "1.0.0",
+  "description": "EJS conversion of Stratis Department - roleplay emergency services landing page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "author": "Converted to EJS",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0"
+  }
+}
